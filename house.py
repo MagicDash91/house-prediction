@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-sns.set_theme(color_codes=True)
 
 
 st.header('House Price Prediction Using Random Forest Regressor')
