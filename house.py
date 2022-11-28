@@ -1,3 +1,4 @@
+%%writefile house.py
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -33,5 +34,7 @@ lat = st.number_input('Latitude')
 Xnew3 = [[area,room,lon,lat]]
 
 y_pred_prob4 = regr.predict(Xnew3)
+hasil = y_pred_prob4.astype(int)
+hasil2 = (str(hasil).lstrip('[').rstrip(']'))
 st.write("Price Prediction")
-st.write(y_pred_prob4)
+st.info(hasil2)
